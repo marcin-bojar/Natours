@@ -28,6 +28,7 @@
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         transition: all .5s;
+        filter: brightness(100%) blur(0);
         backface-visibility: hidden;
     }
 
@@ -50,8 +51,8 @@
     }
 
     &:hover &__caption {
-        transform: translate(-50%, -50%);
         opacity: 1;
+        transform: translate(-50%, -50%);  
     }
 
     &:hover &__img {
