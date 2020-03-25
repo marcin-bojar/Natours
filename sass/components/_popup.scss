@@ -1,5 +1,5 @@
 .popup {
-    background-color: rgba($color-black, .9);
+    background-color: rgba($color-black, .8);
     position: fixed;
     top: 0;
     left: 0;
@@ -9,6 +9,11 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s;
+
+    @supports(backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+        background-color: rgba($color-black, .3);
+        backdrop-filter: blur(10px);
+    }
 
     &:target {
         opacity: 1;
